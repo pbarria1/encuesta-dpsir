@@ -7,103 +7,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --sky: #EDF5FB;
-    --sky-mid: #D4E9F7;
-    --sky-deep: #B8D9F0;
-    --azure: #3A7DB5;
-    --azure-dark: #2A5F8F;
-    --azure-pale: #F0F7FD;
-    --slate: #3D5166;
-    --slate-mid: #607A90;
-    --slate-light: #8FA5B8;
-    --slate-faint: #C5D4DE;
-    --white: #FFFFFF;
-
+    --sky: #EDF5FB; --sky-mid: #D4E9F7; --sky-deep: #B8D9F0;
+    --azure: #3A7DB5; --azure-dark: #2A5F8F; --azure-pale: #F0F7FD;
+    --slate: #3D5166; --slate-mid: #607A90; --slate-light: #8FA5B8;
+    --slate-faint: #C5D4DE; --white: #FFFFFF;
     --d-bg: #EBF4FB; --d-border: #A8CDE6; --d-text: #1E5A84;
     --p-bg: #FDF0F0; --p-border: #F0B8B8; --p-text: #8C2A2A;
     --s-bg: #EDF7F2; --s-border: #A3D9BB; --s-text: #1B6B42;
     --i-bg: #FDF6EC; --i-border: #F0D49A; --i-text: #7A5010;
     --r-bg: #F3EEFA; --r-border: #C9AAED; --r-text: #5A2E8C;
-
     --score1-bg: #FEF2F2; --score1-border: #FCA5A5; --score1-text: #B91C1C;
     --score2-bg: #FFFBEB; --score2-border: #FCD34D; --score2-text: #92400E;
     --score3-bg: #F0FDF4; --score3-border: #86EFAC; --score3-text: #166534;
-
     --radius: 12px; --radius-sm: 8px;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--sky); color: var(--slate); font-size: 15px; line-height: 1.65; min-height: 100vh; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--sky);
-    color: var(--slate);
-    font-size: 15px;
-    line-height: 1.65;
-    min-height: 100vh;
-  }
-
-  .page-header {
-    background: linear-gradient(160deg, #C8DFF2 0%, #D8EBF7 40%, #E6F2FB 100%);
-    border-bottom: 1px solid var(--sky-deep);
-    padding: 3rem 2rem 2.5rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .page-header::before {
-    content: ''; position: absolute; top: -60px; right: -80px;
-    width: 300px; height: 300px; border-radius: 50%;
-    background: rgba(255,255,255,0.22); pointer-events: none;
-  }
-
-  .page-header::after {
-    content: ''; position: absolute; bottom: -40px; left: -60px;
-    width: 200px; height: 200px; border-radius: 50%;
-    background: rgba(255,255,255,0.16); pointer-events: none;
-  }
-
-  .project-tag {
-    display: inline-block;
-    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--azure-dark);
-    background: rgba(255,255,255,0.55);
-    border: 1px solid var(--sky-deep);
-    border-radius: 20px; padding: 4px 14px;
-    margin-bottom: 1.25rem; font-weight: 500;
-  }
-
-  .page-header h1 {
-    font-family: 'Lora', serif;
-    font-size: clamp(20px, 3.5vw, 29px);
-    font-weight: 500; line-height: 1.3;
-    max-width: 660px; margin: 0 auto 0.75rem;
-    color: var(--azure-dark);
-  }
-
-  .page-header .subtitle {
-    font-size: 13px; color: var(--slate-mid);
-    max-width: 560px; margin: 0 auto 1.75rem;
-    font-style: italic;
-  }
-
-  .author-band {
-    background: rgba(255,255,255,0.62);
-    border: 1px solid var(--sky-deep);
-    border-radius: var(--radius);
-    max-width: 700px; margin: 0 auto;
-    padding: 1.1rem 1.5rem; text-align: left;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 0.75rem 2rem; position: relative; z-index: 1;
-  }
-
-  .ab-item label {
-    display: block; font-size: 10px; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--slate-light);
-    font-weight: 500; margin-bottom: 3px;
-  }
-
+  .page-header { background: linear-gradient(160deg, #C8DFF2 0%, #D8EBF7 40%, #E6F2FB 100%); border-bottom: 1px solid var(--sky-deep); padding: 3rem 2rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+  .page-header::before { content: ''; position: absolute; top: -60px; right: -80px; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,255,255,0.22); pointer-events: none; }
+  .page-header::after { content: ''; position: absolute; bottom: -40px; left: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.16); pointer-events: none; }
+  .project-tag { display: inline-block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--azure-dark); background: rgba(255,255,255,0.55); border: 1px solid var(--sky-deep); border-radius: 20px; padding: 4px 14px; margin-bottom: 1.25rem; font-weight: 500; }
+  .page-header h1 { font-family: 'Lora', serif; font-size: clamp(20px, 3.5vw, 29px); font-weight: 500; line-height: 1.3; max-width: 660px; margin: 0 auto 0.75rem; color: var(--azure-dark); }
+  .page-header .subtitle { font-size: 13px; color: var(--slate-mid); max-width: 560px; margin: 0 auto 1.75rem; font-style: italic; }
+  .author-band { background: rgba(255,255,255,0.62); border: 1px solid var(--sky-deep); border-radius: var(--radius); max-width: 700px; margin: 0 auto; padding: 1.1rem 1.5rem; text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 2rem; position: relative; z-index: 1; }
+  .ab-item label { display: block; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate-light); font-weight: 500; margin-bottom: 3px; }
   .ab-item p { font-size: 13px; color: var(--slate); line-height: 1.45; }
   .ab-item a { color: var(--azure); text-decoration: none; }
   .ab-item a:hover { text-decoration: underline; }
@@ -111,29 +39,11 @@
 
   .container { max-width: 840px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
 
-  .instructions-card {
-    background: var(--white); border: 1px solid var(--sky-deep);
-    border-radius: var(--radius); padding: 1.5rem; margin-bottom: 2rem;
-    box-shadow: 0 1px 4px rgba(58,125,181,0.07);
-  }
-
-  .instructions-card h2 {
-    font-family: 'Lora', serif; font-size: 16px; font-weight: 500;
-    margin-bottom: 0.6rem; color: var(--azure-dark);
-  }
-
-  .instructions-card > p {
-    font-size: 14px; color: var(--slate-mid);
-    margin-bottom: 1.25rem; line-height: 1.6;
-  }
-
+  .instructions-card { background: var(--white); border: 1px solid var(--sky-deep); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 1px 4px rgba(58,125,181,0.07); }
+  .instructions-card h2 { font-family: 'Lora', serif; font-size: 16px; font-weight: 500; margin-bottom: 0.6rem; color: var(--azure-dark); }
+  .instructions-card > p { font-size: 14px; color: var(--slate-mid); margin-bottom: 1.25rem; line-height: 1.6; }
   .scale-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-
-  .scale-item {
-    border-radius: var(--radius-sm); padding: 12px 14px;
-    font-size: 13px; border: 1px solid;
-  }
-
+  .scale-item { border-radius: var(--radius-sm); padding: 12px 14px; font-size: 13px; border: 1px solid; }
   .scale-item.s1 { background: var(--score1-bg); border-color: var(--score1-border); }
   .scale-item.s2 { background: var(--score2-bg); border-color: var(--score2-border); }
   .scale-item.s3 { background: var(--score3-bg); border-color: var(--score3-border); }
@@ -144,217 +54,68 @@
   .scale-item p { font-size: 12px; color: var(--slate-mid); line-height: 1.45; }
 
   .meta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 2rem; }
-
-  .field label {
-    display: block; font-size: 11px; font-weight: 500;
-    letter-spacing: 0.07em; text-transform: uppercase;
-    color: var(--slate-light); margin-bottom: 6px;
-  }
-
-  input[type="text"], input[type="email"], textarea, select {
-    width: 100%; background: var(--white);
-    border: 1px solid var(--sky-deep); border-radius: var(--radius-sm);
-    padding: 10px 14px; font-family: 'DM Sans', sans-serif;
-    font-size: 14px; color: var(--slate); outline: none;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-
-  input:focus, textarea:focus, select:focus {
-    border-color: var(--azure);
-    box-shadow: 0 0 0 3px rgba(58,125,181,0.12);
-  }
-
+  .field label { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--slate-light); margin-bottom: 6px; }
+  input[type="text"], input[type="email"], textarea, select { width: 100%; background: var(--white); border: 1px solid var(--sky-deep); border-radius: var(--radius-sm); padding: 10px 14px; font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--slate); outline: none; transition: border-color 0.15s, box-shadow 0.15s; }
+  input:focus, textarea:focus, select:focus { border-color: var(--azure); box-shadow: 0 0 0 3px rgba(58,125,181,0.12); }
   textarea { resize: vertical; }
 
-  .section-card {
-    background: var(--white); border: 1px solid var(--sky-deep);
-    border-radius: var(--radius); margin-bottom: 1.5rem; overflow: hidden;
-    box-shadow: 0 1px 4px rgba(58,125,181,0.06);
-  }
-
-  .section-head {
-    display: flex; align-items: flex-start;
-    gap: 14px; padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid var(--sky-mid);
-  }
-
-  .section-badge {
-    font-size: 12px; font-weight: 500; padding: 4px 13px;
-    border-radius: 20px; white-space: nowrap; margin-top: 2px;
-    flex-shrink: 0; border: 1px solid;
-  }
-
+  .section-card { background: var(--white); border: 1px solid var(--sky-deep); border-radius: var(--radius); margin-bottom: 1.5rem; overflow: hidden; box-shadow: 0 1px 4px rgba(58,125,181,0.06); }
+  .section-head { display: flex; align-items: flex-start; gap: 14px; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--sky-mid); }
+  .section-badge { font-size: 12px; font-weight: 500; padding: 4px 13px; border-radius: 20px; white-space: nowrap; margin-top: 2px; flex-shrink: 0; border: 1px solid; }
   .badge-D { background: var(--d-bg); border-color: var(--d-border); color: var(--d-text); }
   .badge-P { background: var(--p-bg); border-color: var(--p-border); color: var(--p-text); }
   .badge-S { background: var(--s-bg); border-color: var(--s-border); color: var(--s-text); }
   .badge-I { background: var(--i-bg); border-color: var(--i-border); color: var(--i-text); }
   .badge-R { background: var(--r-bg); border-color: var(--r-border); color: var(--r-text); }
-
-  .section-head-text h3 {
-    font-family: 'Lora', serif; font-size: 16px; font-weight: 500;
-    margin-bottom: 3px; color: var(--slate);
-  }
-
+  .section-head-text h3 { font-family: 'Lora', serif; font-size: 16px; font-weight: 500; margin-bottom: 3px; color: var(--slate); }
   .section-head-text p { font-size: 13px; color: var(--slate-mid); line-height: 1.5; }
 
-  /* Indicator rows - stacked layout with description */
-  .indicator-row {
-    border-bottom: 1px solid var(--sky-mid);
-    padding: 14px 16px;
-    transition: background 0.1s;
-  }
-
+  .indicator-row { border-bottom: 1px solid var(--sky-mid); padding: 14px 16px; transition: background 0.1s; }
   .indicator-row:hover { background: var(--azure-pale); }
   .indicator-row:last-child { border-bottom: none; }
-
-  .ind-top {
-    display: grid;
-    grid-template-columns: 28px 1fr auto;
-    gap: 8px;
-    align-items: start;
-    margin-bottom: 8px;
-  }
-
-  .ind-num { font-size: 12px; color: var(--slate-light); padding-top: 2px; }
-
+  .ind-top { display: grid; grid-template-columns: 36px 1fr auto; gap: 8px; align-items: start; margin-bottom: 8px; }
+  .ind-num { font-size: 12px; font-weight: 600; color: var(--slate-light); padding-top: 2px; }
   .ind-title { font-size: 14px; font-weight: 500; color: var(--slate); line-height: 1.4; }
-
-  .ind-desc {
-    font-size: 12px; color: var(--slate-mid);
-    font-style: italic; line-height: 1.5;
-    margin: 0 0 10px 36px;
-  }
-
-  .ind-controls {
-    display: flex; align-items: center; gap: 12px;
-    margin-left: 36px; flex-wrap: wrap;
-  }
-
+  .ind-desc { font-size: 12px; color: var(--slate-mid); font-style: italic; line-height: 1.5; margin: 0 0 10px 44px; }
+  .ind-controls { display: flex; align-items: center; gap: 12px; margin-left: 44px; flex-wrap: wrap; }
   .score-group { display: flex; gap: 6px; flex-shrink: 0; }
-
-  .score-btn {
-    width: 36px; height: 36px; border-radius: 50%;
-    border: 1.5px solid var(--slate-faint); background: transparent;
-    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
-    color: var(--slate-mid); cursor: pointer; transition: all 0.14s;
-    display: flex; align-items: center; justify-content: center;
-  }
-
+  .score-btn { width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid var(--slate-faint); background: transparent; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: var(--slate-mid); cursor: pointer; transition: all 0.14s; display: flex; align-items: center; justify-content: center; }
   .score-btn:hover { border-color: var(--azure); color: var(--azure); background: var(--azure-pale); }
   .score-btn.sel-1 { background: var(--score1-bg); border-color: var(--score1-border); color: var(--score1-text); }
   .score-btn.sel-2 { background: var(--score2-bg); border-color: var(--score2-border); color: var(--score2-text); }
   .score-btn.sel-3 { background: var(--score3-bg); border-color: var(--score3-border); color: var(--score3-text); }
+  .obs-field { flex: 1; min-width: 180px; font-size: 13px; padding: 7px 10px; border-radius: 7px; border: 1px solid var(--sky-deep); font-family: 'DM Sans', sans-serif; color: var(--slate); background: var(--white); resize: vertical; min-height: 36px; transition: border-color 0.15s, box-shadow 0.15s; }
+  .obs-field:disabled { background: var(--sky); color: var(--slate-faint); cursor: not-allowed; border-color: var(--sky-mid); }
+  .obs-field:focus { border-color: var(--azure); box-shadow: 0 0 0 3px rgba(58,125,181,0.1); outline: none; }
+  .obs-label { font-size: 11px; color: var(--slate-light); white-space: nowrap; }
 
-  .obs-field {
-    flex: 1; min-width: 180px; font-size: 13px;
-    padding: 7px 10px; border-radius: 7px;
-    border: 1px solid var(--sky-deep); font-family: 'DM Sans', sans-serif;
-    color: var(--slate); background: var(--white);
-    resize: vertical; min-height: 36px;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-
-  .obs-field:disabled {
-    background: var(--sky); color: var(--slate-faint);
-    cursor: not-allowed; border-color: var(--sky-mid);
-  }
-
-  .obs-field:focus {
-    border-color: var(--azure);
-    box-shadow: 0 0 0 3px rgba(58,125,181,0.1); outline: none;
-  }
-
-  .obs-label {
-    font-size: 11px; color: var(--slate-light); white-space: nowrap;
-  }
-
-  .ind-header-row {
-    display: flex; align-items: center; gap: 8px;
-    padding: 8px 16px; background: var(--azure-pale);
-    border-bottom: 1px solid var(--sky-mid);
-  }
-
-  .ind-header-row span {
-    font-size: 10px; font-weight: 500; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--slate-light);
-  }
-
-  .add-block {
-    background: var(--sky); border-top: 1px solid var(--sky-mid);
-    padding: 1rem 1.5rem;
-  }
-
-  .add-block p {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.06em;
-    text-transform: uppercase; color: var(--slate-light); margin-bottom: 10px;
-  }
-
+  .add-block { background: var(--sky); border-top: 1px solid var(--sky-mid); padding: 1rem 1.5rem; }
+  .add-block p { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--slate-light); margin-bottom: 10px; }
   .add-row { display: grid; grid-template-columns: 1fr 100px; gap: 8px; margin-bottom: 8px; }
   .add-row:last-child { margin-bottom: 0; }
 
-  .final-card {
-    background: var(--white); border: 1px solid var(--sky-deep);
-    border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem;
-    box-shadow: 0 1px 4px rgba(58,125,181,0.06);
-  }
+  .final-card { background: var(--white); border: 1px solid var(--sky-deep); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(58,125,181,0.06); }
+  .final-card label { display: block; font-size: 14px; font-weight: 500; color: var(--slate); margin-bottom: 10px; line-height: 1.5; }
 
-  .final-card label {
-    display: block; font-size: 14px; font-weight: 500;
-    color: var(--slate); margin-bottom: 10px; line-height: 1.5;
-  }
-
-  .btn-submit {
-    display: block; width: 100%; padding: 15px;
-    background: var(--azure); color: var(--white);
-    font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
-    border: none; border-radius: var(--radius); cursor: pointer;
-    transition: background 0.15s, transform 0.1s; letter-spacing: 0.02em;
-  }
-
+  .btn-submit { display: block; width: 100%; padding: 15px; background: var(--azure); color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; border: none; border-radius: var(--radius); cursor: pointer; transition: background 0.15s, transform 0.1s; letter-spacing: 0.02em; }
   .btn-submit:hover { background: var(--azure-dark); }
   .btn-submit:active { transform: scale(0.99); }
   .btn-submit:disabled { opacity: 0.55; cursor: not-allowed; }
 
-  .success-banner {
-    display: none; background: var(--score3-bg);
-    border: 1px solid var(--score3-border); border-radius: var(--radius);
-    padding: 1.25rem 1.5rem; text-align: center; margin-top: 1.25rem;
-  }
-
+  .success-banner { display: none; background: var(--score3-bg); border: 1px solid var(--score3-border); border-radius: var(--radius); padding: 1.25rem 1.5rem; text-align: center; margin-top: 1.25rem; }
   .success-banner.show { display: block; }
   .success-banner strong { color: var(--score3-text); font-size: 15px; display: block; }
   .success-banner p { font-size: 13px; color: var(--slate-mid); margin-top: 4px; }
-
-  .error-banner {
-    display: none; background: var(--score1-bg);
-    border: 1px solid var(--score1-border); border-radius: var(--radius);
-    padding: 1rem 1.5rem; text-align: center; margin-top: 1.25rem;
-  }
-
+  .error-banner { display: none; background: var(--score1-bg); border: 1px solid var(--score1-border); border-radius: var(--radius); padding: 1rem 1.5rem; text-align: center; margin-top: 1.25rem; }
   .error-banner.show { display: block; }
   .error-banner p { color: var(--score1-text); font-size: 14px; }
-
-  .spinner {
-    display: none; width: 20px; height: 20px;
-    border: 2px solid rgba(255,255,255,0.3); border-top-color: white;
-    border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto;
-  }
-
+  .spinner { display: none; width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto; }
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  .page-footer {
-    background: #D8EBF7; border-top: 1px solid var(--sky-deep);
-    padding: 2rem 1.5rem; text-align: center;
-  }
-
-  .footer-unis {
-    display: flex; justify-content: center; align-items: center;
-    gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem;
-  }
-
+  .page-footer { background: #D8EBF7; border-top: 1px solid var(--sky-deep); padding: 2rem 1.5rem; text-align: center; }
+  .footer-unis { display: flex; justify-content: center; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
   .footer-uni { font-size: 12px; font-weight: 500; color: var(--azure-dark); letter-spacing: 0.02em; }
   .footer-sep { width: 1px; height: 16px; background: var(--sky-deep); }
-
   .page-footer p { font-size: 12px; color: var(--slate-mid); line-height: 1.7; max-width: 640px; margin: 0 auto; }
   .page-footer a { color: var(--azure); text-decoration: none; }
   .page-footer a:hover { text-decoration: underline; }
@@ -364,8 +125,8 @@
     .scale-grid { grid-template-columns: 1fr; }
     .add-row { grid-template-columns: 1fr; }
     .author-band { grid-template-columns: 1fr; }
-    .ind-top { grid-template-columns: 24px 1fr; }
-    .ind-top .score-group { grid-column: 1/-1; margin-left: 24px; }
+    .ind-top { grid-template-columns: 36px 1fr; }
+    .ind-top .score-group { grid-column: 1/-1; margin-left: 36px; }
     .footer-sep { display: none; }
   }
 </style>
@@ -376,7 +137,6 @@
   <span class="project-tag">Proyecto Anillo ATE230046 · ANID</span>
   <h1>Taller de validación — Indicadores de resiliencia socioecológica de cuenca, con foco en el sector agrícola</h1>
   <p class="subtitle">Marco DPSIR aplicado al análisis de resiliencia socioecológica · Nemec et al. (2014). Ecology and Society 19(1): 34.</p>
-
   <div class="author-band">
     <div class="ab-item">
       <label>Investigación de tesis</label>
@@ -395,35 +155,19 @@
 </header>
 
 <div class="container">
-
   <div class="instructions-card">
     <h2>Instrucciones</h2>
     <p>Este instrumento evalúa si los indicadores propuestos en el marco DPSIR (Impulsor–Presión–Estado–Impacto–Respuesta) son apropiados para medir la resiliencia socioecológica de cuenca, con foco en el sector agrícola. Para cada indicador marque el puntaje que corresponda. Si marcó 1 o 2, anote en la columna de observaciones qué ajuste propone o qué aspecto falta. Al final de cada componente hay espacio para sugerir indicadores adicionales.</p>
     <div class="scale-grid" style="margin-top:1.25rem">
-      <div class="scale-item s1">
-        <strong>1 — No pertinente</strong>
-        <p>El indicador no refleja una dimensión relevante de la resiliencia agrícola en este territorio, o no puede medirse de manera confiable.</p>
-      </div>
-      <div class="scale-item s2">
-        <strong>2 — Parcialmente pertinente</strong>
-        <p>El indicador es relevante pero incompleto, ambiguo, o debería modificarse para este contexto.</p>
-      </div>
-      <div class="scale-item s3">
-        <strong>3 — Muy pertinente</strong>
-        <p>El indicador captura bien una dimensión clave de la resiliencia del sector y puede medirse en el territorio.</p>
-      </div>
+      <div class="scale-item s1"><strong>1 — No pertinente</strong><p>El indicador no refleja una dimensión relevante de la resiliencia agrícola en este territorio, o no puede medirse de manera confiable.</p></div>
+      <div class="scale-item s2"><strong>2 — Parcialmente pertinente</strong><p>El indicador es relevante pero incompleto, ambiguo, o debería modificarse para este contexto.</p></div>
+      <div class="scale-item s3"><strong>3 — Muy pertinente</strong><p>El indicador captura bien una dimensión clave de la resiliencia del sector y puede medirse en el territorio.</p></div>
     </div>
   </div>
 
   <div class="meta-row">
-    <div class="field">
-      <label>Organización</label>
-      <input type="text" id="org" placeholder="Nombre de su organización">
-    </div>
-    <div class="field">
-      <label>Rol / cargo</label>
-      <input type="text" id="rol" placeholder="Su cargo o rol">
-    </div>
+    <div class="field"><label>Organización</label><input type="text" id="org" placeholder="Nombre de su organización"></div>
+    <div class="field"><label>Rol / cargo</label><input type="text" id="rol" placeholder="Su cargo o rol"></div>
   </div>
 
   <div id="sections-container"></div>
@@ -432,7 +176,6 @@
     <label>Comentario final — ¿Hay alguna dimensión de la resiliencia agrícola en su territorio que no esté siendo capturada por ninguna de las cinco componentes DPSIR ni por los indicadores propuestos?</label>
     <textarea id="comentario-final" rows="4" placeholder="Escriba su comentario aquí..."></textarea>
   </div>
-
   <div class="final-card">
     <label>¿Le interesa recibir más información sobre los resultados de esta investigación? Puede indicar su correo electrónico.</label>
     <input type="email" id="email-contact" placeholder="correo@ejemplo.cl">
@@ -442,16 +185,13 @@
     <span id="btn-text">Enviar respuesta</span>
     <div class="spinner" id="spinner"></div>
   </button>
-
   <div class="success-banner" id="success-banner">
     <strong>✓ Respuesta enviada correctamente</strong>
     <p>Sus respuestas han sido registradas. Muchas gracias por su participación y aporte a esta investigación.</p>
   </div>
-
   <div class="error-banner" id="error-banner">
     <p id="error-msg">Ocurrió un error al enviar. Por favor intente nuevamente.</p>
   </div>
-
 </div>
 
 <footer class="page-footer">
@@ -462,12 +202,7 @@
     <div class="footer-sep"></div>
     <span class="footer-uni">Universidad Andrés Bello</span>
   </div>
-  <p>
-    Proyecto Anillo ATE230046 financiado por <strong>ANID</strong> &nbsp;·&nbsp;
-    Tesis de Magíster en Gestión y Políticas Públicas — Universidad de Chile &nbsp;·&nbsp;
-    <strong>Álvaro Isla</strong> &nbsp;·&nbsp;
-    <a href="mailto:alvaro.isla@ug.uchile.cl">alvaro.isla@ug.uchile.cl</a>
-  </p>
+  <p>Proyecto Anillo ATE230046 financiado por <strong>ANID</strong> &nbsp;·&nbsp; Tesis de Magíster en Gestión y Políticas Públicas — Universidad de Chile &nbsp;·&nbsp; <strong>Álvaro Isla</strong> &nbsp;·&nbsp; <a href="mailto:alvaro.isla@ug.uchile.cl">alvaro.isla@ug.uchile.cl</a></p>
 </footer>
 
 <script>
@@ -478,51 +213,53 @@ const SECTIONS = [
     id: 'D', label: 'Impulsor (Driver)', badgeClass: 'badge-D',
     def: 'Fuerzas socioeconómicas estructurales que condicionan las actividades del sistema agrícola: nivel de desarrollo económico, productividad, gasto fiscal, etc.',
     indicators: [
-      { n: 1, title: 'Productividad laboral agrícola (M$/persona)', desc: 'Mide el valor económico generado por la actividad silvoagropecuaria en relación con la población del territorio. Permite aproximar el aporte económico del sector agrícola por persona. Valores más altos indican mayor generación de valor económico en relación con la población regional.' },
-      { n: 2, title: 'Rendimiento económico de la tierra cultivada (MM$/ha)', desc: 'Mide el valor económico generado por la actividad silvoagropecuaria por unidad de superficie cultivada. Permite evaluar qué tan intensivamente se aprovecha la tierra desde una perspectiva económica. Valores más altos indican mayor retorno económico por hectárea cultivada.' },
-      { n: 3, title: 'Participación del PIB silvoagropecuario en el PIB regional (%)', desc: 'Mide la importancia relativa del sector silvoagropecuario dentro de la economía regional. Se expresa como la proporción del PIB silvoagropecuario respecto del PIB total regional. Valores más altos indican una mayor relevancia económica del sector agrícola en el territorio.' },
+      { n: '1', title: 'Productividad laboral agrícola (M$/persona)', desc: 'Mide el valor económico generado por la actividad silvoagropecuaria en relación con la población del territorio. Permite aproximar el aporte económico del sector agrícola por persona. Valores más altos indican mayor generación de valor económico en relación con la población regional.' },
+      { n: '2', title: 'Rendimiento económico de la tierra cultivada (MM$/ha)', desc: 'Mide el valor económico generado por la actividad silvoagropecuaria por unidad de superficie cultivada. Permite evaluar qué tan intensivamente se aprovecha la tierra desde una perspectiva económica. Valores más altos indican mayor retorno económico por hectárea cultivada.' },
+      { n: '3', title: 'Participación del PIB silvoagropecuario en el PIB regional (%)', desc: 'Mide la importancia relativa del sector silvoagropecuario dentro de la economía regional. Se expresa como la proporción del PIB silvoagropecuario respecto del PIB total regional. Valores más altos indican una mayor relevancia económica del sector agrícola en el territorio.' },
     ]
   },
   {
     id: 'P', label: 'Presión (Pressure)', badgeClass: 'badge-P',
     def: 'Factores que ejercen tensión directa sobre el sistema agrícola: variabilidad climática, déficit hídrico, eventos extremos.',
     indicators: [
-      { n: 12, title: 'Duración de la ola de calor (días/año)', desc: 'Mide el número máximo de días consecutivos que conforman un evento de ola de calor, definido como periodos en que la temperatura máxima supera en 5 °C el umbral mensual. Permite identificar la persistencia de eventos de calor extremo que pueden afectar la producción agrícola y la disponibilidad de agua. Valores más altos indican olas de calor más prolongadas y, por tanto, una mayor exposición del sistema agrícola a estrés térmico e hídrico.' },
-      { n: 18, title: 'Índice de Precipitación Estandarizado de 12 meses (SPI-12)', desc: 'Mide las anomalías de precipitación acumulada en los últimos doce meses respecto de su comportamiento histórico. Valores negativos indican déficit hídrico (sequía) y valores positivos condiciones húmedas. El índice se expresa en una escala estandarizada que típicamente varía entre -2 (condiciones extremadamente secas) y 2 (condiciones extremadamente húmedas).' },
+      { n: '12', title: 'Duración de la ola de calor (días/año)', desc: 'Mide el número máximo de días consecutivos que conforman un evento de ola de calor, definido como periodos en que la temperatura máxima supera en 5 °C el umbral mensual. Permite identificar la persistencia de eventos de calor extremo que pueden afectar la producción agrícola y la disponibilidad de agua. Valores más altos indican olas de calor más prolongadas y, por tanto, una mayor exposición del sistema agrícola a estrés térmico e hídrico.' },
+      { n: '18', title: 'Índice de Precipitación Estandarizado de 12 meses (SPI-12)', desc: 'Mide las anomalías de precipitación acumulada en los últimos doce meses respecto de su comportamiento histórico. Valores negativos indican déficit hídrico (sequía) y valores positivos condiciones húmedas. El índice se expresa en una escala estandarizada que típicamente varía entre -2 (condiciones extremadamente secas) y 2 (condiciones extremadamente húmedas).' },
     ]
   },
   {
     id: 'S', label: 'Estado (State)', badgeClass: 'badge-S',
     def: 'Condición actual del sistema: disponibilidad hídrica, estructura del uso del suelo, demografía rural y estructura de las explotaciones.',
     indicators: [
-      { n: 9,  title: 'Dotación de derechos de agua consuntivos por unidad de superficie (m³/s/km²)', desc: 'Mide la cantidad de derechos de aprovechamiento de aguas consuntivos otorgados en relación con la superficie de la cuenca. Permite aproximar el nivel de presión o intensidad de uso del recurso hídrico desde el punto de vista de su asignación legal. Valores más altos indican una mayor concentración de derechos de agua por unidad de superficie.' },
-      { n: 10, title: 'Dotación de derechos de agua consuntivos per cápita (l/s/persona)', desc: 'Mide la cantidad de derechos de aprovechamiento de aguas consuntivos otorgados en relación con la población de la cuenca. Permite evaluar cómo se distribuye el acceso formal al recurso hídrico entre los habitantes del territorio. Valores más altos indican una mayor cantidad de derechos de agua por persona.' },
-      { n: 11, title: 'Superficie cultivada total (ha)', desc: 'Mide la superficie total sembrada en el territorio. Permite dimensionar la magnitud del uso agrícola del suelo y la presión potencial sobre los recursos hídricos. Valores más altos indican una mayor extensión de suelo destinada a actividades agrícolas.' },
-      { n: 13, title: 'Proporción de población rural (%)', desc: 'Mide qué parte de la población total habita en zonas rurales. Permite identificar el peso relativo de la ruralidad en el territorio. Valores más altos indican una mayor presencia de población rural.' },
-      { n: 14, title: 'Edad promedio de los agricultores (frecuencia por tramo de edad)', desc: 'Mide la distribución etaria de la población agrícola. Permite evaluar el recambio generacional y posibles desafíos para la sostenibilidad del sector. Valores más altos indican una mayor concentración de agricultores en ese tramo de edad.' },
-      { n: 17, title: 'Participación de unidades productivas agrícolas según tamaño (%)', desc: 'Mide la proporción que representan las unidades productivas agrícolas de distinto tamaño respecto del total en el territorio. Permite caracterizar la estructura productiva del sector agrícola y su grado de concentración. Valores más altos indican una mayor cantidad de unidades productivas agrícolas de ese tamaño.' },
-      { n: 19, title: 'Proporción de superficie sembrada en la cuenca (ha/km²)', desc: 'Mide la superficie sembrada en relación con la superficie total de la cuenca. Permite evaluar la intensidad del uso agrícola del territorio. Valores más altos indican una mayor proporción del espacio de la cuenca destinada a actividades de siembra.' },
+      { n: '9',  title: 'Dotación de derechos de agua consuntivos por unidad de superficie (m³/s/km²)', desc: 'Mide la cantidad de derechos de aprovechamiento de aguas consuntivos otorgados en relación con la superficie de la cuenca. Permite aproximar el nivel de presión o intensidad de uso del recurso hídrico desde el punto de vista de su asignación legal. Valores más altos indican una mayor concentración de derechos de agua por unidad de superficie.' },
+      { n: '10', title: 'Dotación de derechos de agua consuntivos per cápita (l/s/persona)', desc: 'Mide la cantidad de derechos de aprovechamiento de aguas consuntivos otorgados en relación con la población de la cuenca. Permite evaluar cómo se distribuye el acceso formal al recurso hídrico entre los habitantes del territorio. Valores más altos indican una mayor cantidad de derechos de agua por persona.' },
+      { n: '11', title: 'Superficie cultivada total (ha)', desc: 'Mide la superficie total sembrada en el territorio. Permite dimensionar la magnitud del uso agrícola del suelo y la presión potencial sobre los recursos hídricos. Valores más altos indican una mayor extensión de suelo destinada a actividades agrícolas.' },
+      { n: '13', title: 'Proporción de población rural (%)', desc: 'Este indicador mide qué parte de la población total habita en zonas rurales. Permite identificar el peso relativo de la ruralidad en el territorio. Valores más altos indican una mayor presencia de población rural.' },
+      { n: '14', title: 'Edad promedio de los agricultores (Frecuencia por tramo de edad)', desc: 'Mide la distribución etaria de la población agrícola. Permite evaluar el recambio generacional y posibles desafíos para la sostenibilidad del sector. Valores más altos indican una mayor concentración de agricultores en ese tramo de edad.' },
+      { n: '17', title: 'Participación de unidades productivas agrícolas según tamaño (%)', desc: 'Mide la proporción que representan las unidades productivas agrícolas de distinto tamaño respecto del total en el territorio. Permite caracterizar la estructura productiva del sector agrícola y su grado de concentración. Valores más altos indican una mayor cantidad de unidades productivas agrícolas de ese tamaño.' },
+      { n: '19', title: 'Proporción de superficie sembrada en la cuenca (ha/km²)', desc: 'Mide la superficie sembrada en relación con la superficie total de la cuenca. Permite evaluar la intensidad del uso agrícola del territorio. Valores más altos indican una mayor proporción del espacio de la cuenca destinada a actividades de siembra.' },
     ]
   },
   {
     id: 'I', label: 'Impacto (Impact)', badgeClass: 'badge-I',
     def: 'Efectos observables de las presiones sobre el bienestar del sistema: producción, empleo rural, ingreso y rendimiento de cultivos.',
     indicators: [
-      { n: 7,  title: 'Participación del empleo agrícola en el empleo total (%)', desc: 'Mide la proporción del empleo total que corresponde a actividades agrícolas en el territorio. Permite identificar el peso del sector agrícola dentro de la estructura laboral. Valores más altos indican una mayor dependencia del empleo agrícola en la economía local.' },
-      { n: 15, title: 'Desempeño de la producción agrícola respecto del promedio de los últimos 5 años (Ton/Ton)', desc: 'Compara la producción agrícola actual con el promedio observado en los últimos cinco años. Permite evaluar si el desempeño reciente del sector está sobre o bajo su comportamiento histórico. Valores mayores a 1 indican un desempeño superior al promedio quinquenal.' },
-      { n: 16, title: 'Desempeño del PIB silvoagropecuario respecto del promedio de los últimos 5 años ($/$$)', desc: 'Compara el PIB silvoagropecuario actual con el promedio de los últimos cinco años. Permite observar la evolución reciente del sector en términos económicos. Valores mayores a 1 indican un desempeño superior al promedio quinquenal.' },
-      { n: 20, title: 'Rendimiento de granos alimenticios (Ton/ha)', desc: 'Mide la producción de granos obtenida por unidad de superficie cultivada. Permite evaluar el desempeño productivo de estos cultivos y su relación con condiciones tecnológicas, climáticas o de manejo. Valores más altos indican una mayor productividad de granos por hectárea.' },
+      { n: '7',   title: 'Participación del empleo agrícola en el empleo total (%)', desc: 'Mide la proporción del empleo total que corresponde a actividades agrícolas en el territorio. Permite identificar el peso del sector agrícola dentro de la estructura laboral. Valores más altos indican una mayor dependencia del empleo agrícola en la economía local.' },
+      { n: '15',  title: 'Desempeño de la producción agrícola respecto del promedio de los últimos 5 años (Ton/Ton)', desc: 'Compara la producción agrícola actual con el promedio observado en los últimos cinco años. Permite evaluar si el desempeño reciente del sector está sobre o bajo su comportamiento histórico. Valores mayores a 1 indican un desempeño superior al promedio quinquenal.' },
+      { n: '16',  title: 'Desempeño del PIB silvoagropecuario respecto del promedio de los últimos 5 años ($/$$)', desc: 'Compara el PIB silvoagropecuario actual con el promedio de los últimos cinco años. Permite observar la evolución reciente del sector en términos económicos. Valores mayores a 1 indican un desempeño superior al promedio quinquenal.' },
+      { n: '20a', title: 'Rendimiento de granos alimenticios (Ton/ha)', desc: 'Mide la producción de granos obtenida por unidad de superficie cultivada. Permite evaluar el desempeño productivo de estos cultivos y su relación con condiciones tecnológicas, climáticas o de manejo. Valores más altos indican una mayor productividad de granos por hectárea.' },
+      { n: '20b', title: 'Rendimiento de cultivos de seguridad alimentaria (Ton/ha)', desc: 'Mide la producción de cultivos de seguridad alimentaria obtenida por unidad de superficie cultivada. Permite evaluar el desempeño productivo de estos cultivos y su relación con condiciones tecnológicas, climáticas o de manejo. Valores más altos indican una mayor productividad de granos por hectárea. De acuerdo con ODEPA, los cultivos de seguridad alimentaria incluyen cereales, papas, legumbres y hortalizas.' },
     ]
   },
   {
     id: 'R', label: 'Respuesta (Response)', badgeClass: 'badge-R',
     def: 'Acciones e intervenciones adoptadas para mantener o recuperar la resiliencia: eficiencia hídrica, inversión en infraestructura, cobertura de riego.',
     indicators: [
-      { n: 4,  title: 'Rendimiento económico del agua de uso consuntivo (MM$/l/s)', desc: 'Mide el valor económico generado por la actividad silvoagropecuaria en relación con la demanda de agua de uso consuntivo acumulada. Permite evaluar cuánta producción económica se obtiene por unidad de agua comprometida. Valores más altos indican un uso económicamente más eficiente del recurso hídrico.' },
-      { n: 5,  title: 'Eficiencia del uso del agua en la producción de granos (Ton/l/s)', desc: 'Mide cuánta producción de granos se obtiene en relación con la demanda de agua de uso consuntivo acumulada. Permite evaluar la eficiencia hídrica de este tipo de producción agrícola. Valores más altos indican mayor producción de granos por unidad de agua utilizada.' },
-      { n: 6,  title: 'Inversión en infraestructura de riego (UF/año)', desc: 'Mide el monto de recursos adjudicados para obras o proyectos de riego. Permite observar el esfuerzo de inversión fiscal orientado a fortalecer la seguridad hídrica y la capacidad productiva del sector agrícola. Valores más altos indican una mayor prioridad financiera asignada a infraestructura de riego.' },
-      { n: 8,  title: 'Densidad de la red de canales de riego (km/km²)', desc: 'Mide la cantidad de derechos de aprovechamiento de aguas consuntivos otorgados en relación con la superficie cultivada de la cuenca. Permite aproximar el nivel de presión o intensidad de uso del recurso hídrico desde el punto de vista de su asignación legal. Valores más altos indican una mayor concentración de derechos de agua por unidad de superficie.' },
-      { n: 21, title: 'Cobertura de riego sobre la superficie cultivada (%)', desc: 'Mide la proporción de superficie regada respecto de la superficie cultivada total. Permite estimar el grado de control hídrico de la producción agrícola y su menor dependencia de la precipitación. Valores más altos indican una mayor cobertura de riego y, por tanto, una mayor capacidad de control sobre el suministro de agua en la producción agrícola.' },
+      { n: '4',  title: 'Rendimiento económico del agua de uso consuntivo (MM$/l/s)', desc: 'Mide el valor económico generado por la actividad silvoagropecuaria en relación con la demanda de agua de uso consuntivo acumulada. Permite evaluar cuánta producción económica se obtiene por unidad de agua comprometida. Valores más altos indican un uso económicamente más eficiente del recurso hídrico.' },
+      { n: '5a', title: 'Eficiencia del uso del agua en la producción de granos (Ton/l/s)', desc: 'Mide cuánta producción de granos se obtiene en relación con la demanda de agua de uso consuntivo acumulada. Permite evaluar la eficiencia hídrica de este tipo de producción agrícola. Valores más altos indican mayor producción de granos por unidad de agua utilizada.' },
+      { n: '5b', title: 'Eficiencia del uso de agua en la producción de cultivos básicos estratégicos para la seguridad alimentaria (Ton/l/s)', desc: 'Mide cuánta producción de cultivos de seguridad alimentaria se obtiene en relación con la demanda de agua de uso consuntivo acumulada. Permite evaluar la eficiencia hídrica de este tipo de producción agrícola. Valores más altos indican mayor producción de cultivos de seguridad alimentaria por unidad de agua utilizada. De acuerdo con ODEPA, los cultivos de seguridad alimentaria incluyen cereales, papas, legumbres y hortalizas.' },
+      { n: '6',  title: 'Inversión en infraestructura de riego (UF/año)', desc: 'Mide el monto de recursos adjudicados para obras o proyectos de riego. Permite observar el esfuerzo de inversión fiscal orientado a fortalecer la seguridad hídrica y la capacidad productiva del sector agrícola. Valores más altos indican una mayor prioridad financiera asignada a infraestructura de riego.' },
+      { n: '8',  title: 'Densidad de la red de canales de riego (km/km²)', desc: 'Este indicador mide la longitud de la red de canales de riego en relación con la superficie de la cuenca. Permite aproximar el nivel de infraestructura disponible para la distribución de agua con fines agrícolas. Valores más altos indican una mayor presencia de infraestructura de riego por unidad de superficie.' },
+      { n: '21', title: 'Cobertura de riego sobre la superficie cultivada (%)', desc: 'Mide la proporción de superficie regada respecto de la superficie cultivada total. Permite estimar el grado de control hídrico de la producción agrícola y su menor dependencia de la precipitación. Valores más altos indican una mayor cobertura de riego y, por tanto, una mayor capacidad de control sobre el suministro de agua en la producción agrícola.' },
     ]
   }
 ];
@@ -535,11 +272,9 @@ function buildSections() {
   SECTIONS.forEach(sec => {
     const div = document.createElement('div');
     div.className = 'section-card';
-
     const rows = sec.indicators.map(ind => {
       const key = `${sec.id}_${ind.n}`;
-      scores[key] = null;
-      obs[key] = '';
+      scores[key] = null; obs[key] = '';
       return `
         <div class="indicator-row">
           <div class="ind-top">
@@ -552,8 +287,7 @@ function buildSections() {
           <p class="ind-desc">${ind.desc}</p>
           <div class="ind-controls">
             <span class="obs-label">Observación / ajuste:</span>
-            <textarea class="obs-field" id="obs_${key}" placeholder="Anote aquí si marcó 1 o 2..." rows="1" disabled
-              oninput="obs['${key}']=this.value"></textarea>
+            <textarea class="obs-field" id="obs_${key}" placeholder="Anote aquí si marcó 1 o 2..." rows="1" disabled oninput="obs['${key}']=this.value"></textarea>
           </div>
         </div>`;
     }).join('');
@@ -561,27 +295,18 @@ function buildSections() {
     div.innerHTML = `
       <div class="section-head">
         <span class="section-badge ${sec.badgeClass}">${sec.id}</span>
-        <div class="section-head-text">
-          <h3>${sec.label}</h3>
-          <p>${sec.def}</p>
-        </div>
+        <div class="section-head-text"><h3>${sec.label}</h3><p>${sec.def}</p></div>
       </div>
       ${rows}
       <div class="add-block">
         <p>¿Falta algún indicador clave?</p>
         <div class="add-row">
           <input type="text" id="add1_${sec.id}" placeholder="Indicador adicional 1...">
-          <select id="add1dpsir_${sec.id}">
-            <option value="">DPSIR</option>
-            <option>D</option><option>P</option><option>S</option><option>I</option><option>R</option>
-          </select>
+          <select id="add1dpsir_${sec.id}"><option value="">DPSIR</option><option>D</option><option>P</option><option>S</option><option>I</option><option>R</option></select>
         </div>
         <div class="add-row">
           <input type="text" id="add2_${sec.id}" placeholder="Indicador adicional 2...">
-          <select id="add2dpsir_${sec.id}">
-            <option value="">DPSIR</option>
-            <option>D</option><option>P</option><option>S</option><option>I</option><option>R</option>
-          </select>
+          <select id="add2dpsir_${sec.id}"><option value="">DPSIR</option><option>D</option><option>P</option><option>S</option><option>I</option><option>R</option></select>
         </div>
       </div>`;
     container.appendChild(div);
@@ -595,16 +320,12 @@ function selectScore(key, val) {
     btn.className = 'score-btn' + (v === val ? ` sel-${v}` : '');
   });
   const obsEl = document.getElementById(`obs_${key}`);
-  if (obsEl) {
-    obsEl.disabled = val === 3;
-    if (val === 3) { obsEl.value = ''; obs[key] = ''; }
-  }
+  if (obsEl) { obsEl.disabled = val === 3; if (val === 3) { obsEl.value = ''; obs[key] = ''; } }
 }
 
 async function submitSurvey() {
   const org = document.getElementById('org').value.trim();
   if (!org) { alert('Por favor ingrese el nombre de su organización antes de enviar.'); return; }
-
   const btn = document.getElementById('btn-submit');
   const btnText = document.getElementById('btn-text');
   const spinner = document.getElementById('spinner');
@@ -633,11 +354,7 @@ async function submitSurvey() {
   });
 
   try {
-    await fetch(APPS_SCRIPT_URL, {
-      method: 'POST', mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
+    await fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
     document.getElementById('success-banner').classList.add('show');
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     resetForm();
